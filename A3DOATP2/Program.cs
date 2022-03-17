@@ -15,107 +15,167 @@ namespace A3DOATP2
         {
             string a1, b1, c1, d1, Answer1;
             decimal a, b, c, d, Result;
-            bool KeepGoing = true;
 
-            while (KeepGoing)
+            while (true)
             {
-                try
+
+                Console.WriteLine("Select one of the numbers:\n1 - Add;\n2 - Subtract;\n3 - Divide;\n4 - Multiply;\n5 - End the program");
+                Answer1 = Console.ReadLine();
+
+
+                if (Answer1 == "1")
                 {
-                    Console.WriteLine("Select one of the numbers:\n1 - Add;\n2 - Multiply;\n3 - Subtract;\n4 - Divide");
-                    Answer1 = Console.ReadLine();
-
-
-                    if (Answer1 == "1")
+                    while (true)
                     {
-                        Console.WriteLine("Input a number:");
-                        a1 = Console.ReadLine();
-                        a = decimal.Parse(a1);
-                        Console.WriteLine("Input a number:");
-                        b1 = Console.ReadLine();
-                        b = decimal.Parse(b1);
-                        Console.WriteLine("Input a number:");
-                        c1 = Console.ReadLine();
-                        c = decimal.Parse(c1);
-                        Console.WriteLine("Input a number:");
-                        d1 = Console.ReadLine();
-                        d = decimal.Parse(d1);
-                        Result = (a + b + c + d);
-                        Console.WriteLine("The sum of the numbers is {0}", Result);
+                        try 
+                        {
+                            Console.WriteLine("Input a number:");
+                            a1 = Console.ReadLine();
+                            a = decimal.Parse(a1);
+                            Console.WriteLine("Input a number:");
+                            b1 = Console.ReadLine();
+                            b = decimal.Parse(b1);
+                            Console.WriteLine("Input a number:");
+                            c1 = Console.ReadLine();
+                            c = decimal.Parse(c1);
+                            Console.WriteLine("Input a number:");
+                            d1 = Console.ReadLine();
+                            d = decimal.Parse(d1);
+                            Result = (a + b + c + d);
+                            Console.WriteLine("The sum of the numbers is {0}", Result);
+                            break;
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("Please, insert a number");
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Something went wrong");
+                        }
                     }
-
-                    else if (Answer1 == "2")
-                    {
-                        Console.WriteLine("Input a number:");
-                        a1 = Console.ReadLine();
-                        a = decimal.Parse(a1);
-                        Console.WriteLine("Input a number:");
-                        b1 = Console.ReadLine();
-                        b = decimal.Parse(b1);
-                        Console.WriteLine("Input a number:");
-                        c1 = Console.ReadLine();
-                        c = decimal.Parse(c1);
-                        Console.WriteLine("Input a number:");
-                        d1 = Console.ReadLine();
-                        d = decimal.Parse(d1);
-                        Result = (a - c);
-                        Console.WriteLine("The difference between the first and third number is {0}", Result);
-                    }
-
-                    else if (Answer1 == "3")
-                    {
-                        Console.WriteLine("Input a number:");
-                        a1 = Console.ReadLine();
-                        a = decimal.Parse(a1);
-                        Console.WriteLine("Input a number:");
-                        b1 = Console.ReadLine();
-                        b = decimal.Parse(b1);
-                        Console.WriteLine("Input a number:");
-                        c1 = Console.ReadLine();
-                        c = decimal.Parse(c1);
-                        Console.WriteLine("Input a number:");
-                        d1 = Console.ReadLine();
-                        d = decimal.Parse(d1);
-                        Result = (d / (a + b));
-                        Console.WriteLine("The quotient of the forth number by the sum of the first and second number is {0}", Result);
-                    }
-
-                    else if (Answer1 == "4")
-                    {
-                        Console.WriteLine("Input a number:");
-                        a1 = Console.ReadLine();
-                        a = decimal.Parse(a1);
-                        Console.WriteLine("Input a number:");
-                        b1 = Console.ReadLine();
-                        b = decimal.Parse(b1);
-                        Console.WriteLine("Input a number:");
-                        c1 = Console.ReadLine();
-                        c = decimal.Parse(c1);
-                        Console.WriteLine("Input a number:");
-                        d1 = Console.ReadLine();
-                        d = decimal.Parse(d1);
-                        Result = a * c;
-                        Console.WriteLine("The product of the first and third number is {0}", Result);
-                    }
-
-                    else
-                    {
-                        Console.WriteLine("Please select one of the options");
-                        KeepGoing = true;
-                    }
-                    Console.ReadLine();
+                  
                 }
-                catch (DivideByZeroException e)
+                else if (Answer1 == "2")
                 {
-                    Console.WriteLine(e.Message);
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Input a number:");
+                            a1 = Console.ReadLine();
+                            a = decimal.Parse(a1);
+                            Console.WriteLine("Input a number:");
+                            b1 = Console.ReadLine();
+                            b = decimal.Parse(b1);
+                            Console.WriteLine("Input a number:");
+                            c1 = Console.ReadLine();
+                            c = decimal.Parse(c1);
+                            Console.WriteLine("Input a number:");
+                            d1 = Console.ReadLine();
+                            d = decimal.Parse(d1);
+                            Result = (a - c);
+                            Console.WriteLine("The difference between the first and third number is {0}", Result);
+                            break;
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("Please, insert a number");
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Something went wrong");
+                        }
+                    }
+
                 }
-                catch (FormatException e)
+
+                else if (Answer1 == "3")
                 {
-                    Console.WriteLine(e.Message);
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Input a number:");
+                            a1 = Console.ReadLine();
+                            a = decimal.Parse(a1);
+                            Console.WriteLine("Input a number:");
+                            b1 = Console.ReadLine();
+                            b = decimal.Parse(b1);
+                            Console.WriteLine("Input a number:");
+                            c1 = Console.ReadLine();
+                            c = decimal.Parse(c1);
+                            Console.WriteLine("Input a number:");
+                            d1 = Console.ReadLine();
+                            d = decimal.Parse(d1);
+                            Result = (d / (a + b));
+                            Console.WriteLine("The quotient of the forth number by the sum of the first and second number is {0}", Result);
+                            break;
+                        }
+                        catch (DivideByZeroException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("Please, insert a number");
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Something went wrong");
+                        }
+                    }
                 }
-                catch (Exception)
+
+                else if (Answer1 == "4")
                 {
-                    Console.WriteLine("Something went wrong");
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Input a number:");
+                            a1 = Console.ReadLine();
+                            a = decimal.Parse(a1);
+                            Console.WriteLine("Input a number:");
+                            b1 = Console.ReadLine();
+                            b = decimal.Parse(b1);
+                            Console.WriteLine("Input a number:");
+                            c1 = Console.ReadLine();
+                            c = decimal.Parse(c1);
+                            Console.WriteLine("Input a number:");
+                            d1 = Console.ReadLine();
+                            d = decimal.Parse(d1);
+                            Result = a * c;
+                            Console.WriteLine("The product of the first and third number is {0}", Result);
+                            break;
+                        }
+                        catch (FormatException e)
+                        {
+                            Console.WriteLine(e.Message);
+                            Console.WriteLine("Please, insert a number");
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Something went wrong");
+                        }
+                    }
+
                 }
-            } }
+
+                else if (Answer1 == "5")
+                {
+                    break;
+                }
+
+                else
+                {
+                    Console.WriteLine("Please select one of the options");
+                }
+
+            }
+            } 
     }
 }
